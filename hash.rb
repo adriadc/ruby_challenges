@@ -16,4 +16,6 @@ entry_04 = {:books => "Spirit Guides", :author => "Sydney Omarr"}
 entry_05 = {:books => "Chinese Astrology", :author => "Shelly Wu"}
 entry_06 = {:books => "Animal Wise", :author => "Virginia Morell"}
 
+
+
 puts entry_06[:books] 
