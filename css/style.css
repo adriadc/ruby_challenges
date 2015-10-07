@@ -57,6 +57,48 @@
 
 /** End jubileebredenberg's Styles **/
 
+/** Adria Crum's Styles **/
+.adria-advice {
+	background-color: rgb(230, 230, 0);
+	color: rgb(255, 92, 51);
+	font-family:'Helvetica', sans-serif;
+}
+
+.adria-advice p {
+	font-size: 10px;
+	color: black;
+	font-family: 'Helvetica', sans-serif;
+    margin-left: 350px;
+	}
+
+.adria-advice h1 {
+	font-size: 30px;
+	text-align: center;
+	}
+
+.adria-advice .advice {
+	padding: 1px 250px 1px 250px;
+    }
+
+.adria-advice .advice h3 {
+	font-size: 20px;
+	color: #008080;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 20px 20px 10px 100px;
+	}
+
+.adria-advice .advice p {
+	font-size: 16px;
+	text-align: left;
+	position: relative;
+	margin: 20px 20px 10px 100px;
+	}
+
+/** End adriacrum's Styles **/
+
+
 /*~~~~~~~~~~Britni's Styles~~~~~~~~~~*/
 .britni-advice {
   width:500px;
