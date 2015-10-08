@@ -57,6 +57,7 @@
 
 /** End jubileebredenberg's Styles **/
 
+<<<<<<< HEAD
 /** Adria Crum's Styles **/
 .adria-advice {
 	background-color: rgb(230, 230, 0);
@@ -105,6 +106,8 @@ font-family: 'Helvetica', sans-serif;
 /** End adriacrum's Styles **/
 
 
+=======
+>>>>>>> e90be33ed412ac1d1a0b0e4e34714e6dd4b9e7a9
 /*~~~~~~~~~~Britni's Styles~~~~~~~~~~*/
 .britni-advice {
   width:500px;
@@ -2102,7 +2105,37 @@ body.laurenr-advice {
 }
 /** Lauren R's Styles **/
 
+<<<<<<< HEAD
 
+=======
+/** Emily Chapman's Styles **/
+
+body.emilychapman-advice {
+	background-image: url("http://data.whicdn.com/images/90514196/large.gif");
+	background-color: #D3D3D3;
+	}
+	
+.emilychapman-advice {
+	background-color: #FFFFFF;
+	font-family: Georgia;
+	text-align: justify;
+	}
+
+.emilychapman-advice #wrapper {
+	background-color: #FFFFFF;
+	width: 50%;
+	position: fixed; /* or absolute */
+ 	top: 5%;
+    left: 20%;
+	padding: 5%;
+	}
+
+.emilychapman-advice h4 {
+	color: #000;
+	}
+
+/** End of Emily Chapman's Styles **/
+>>>>>>> e90be33ed412ac1d1a0b0e4e34714e6dd4b9e7a9
 
 
 
