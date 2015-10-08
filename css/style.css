@@ -80,9 +80,9 @@
 	padding: 1px 250px 1px 250px;
     }
 
-.adria-advice .advice h3 {
+.adria-advice .advice h4 {
 	font-size: 20px;
-	color: #008080;
+	color: #0000CD;
 	font-family: 'Helvetica', sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -95,6 +95,12 @@
 	position: relative;
 	margin: 20px 20px 10px 100px;
 	}
+.adria-advice footer {
+text-align: center;
+font-size:14px;
+color: #0000CD;
+font-family: 'Helvetica', sans-serif;
+}
 
 /** End adriacrum's Styles **/
 
