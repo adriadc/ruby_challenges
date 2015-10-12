@@ -3,6 +3,7 @@ weather = 'rainy'
 case weather
 when 'sunny’
 	puts "Get out your sunglasses and hat."
+
 when 'cloudy'
 	puts "Put away your sunglasses"
 when 'foggy'
