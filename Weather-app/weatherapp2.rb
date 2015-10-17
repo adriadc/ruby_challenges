@@ -32,7 +32,7 @@ end
     #  condition['date'] => #<Date: -1/2,0,2299161>
     #
 
-#from weather man Github page useage
+
     class Response
 
     attr_accessor :document_root
@@ -43,29 +43,42 @@ end
     end
 
     def condition
-      condition = response.condition['text']
       condition = item_attribute('yweather:condition')
 		translate! do_convertions(condition, [:code, :to_i], [:temp, :to_i], [:date, :to_date], :text)
-      
+      condition = response.condition['text', 'temp', 'date']
     end
 end
     
 
 getweather = weather_info(zipcode)
 
-case getweather
-	when 'sunny'
-		puts "it’s 85 degrees and sunny!"
-	when 'cloudy'
-		puts "55 degrees and crazy cloudy!"
-	when 'rainy'
-		puts "60 degrees and crazy rainy!"
-	when 'snowy'
-		puts "32 degrees and super snowy!"
-	else
-		puts "I am not sure! Look outside!"
-	end
+#
+    # Forecasts for the next 2 days.
+    #
+    #  forecast = response.forecasts.first
+    #  forecast['low'] => 20
+    #  forecast['high'] => 31
+    #  forecast['text'] => "Tornado"
+    #  forecast['code'] => 0
+    #  forecast['day'] => "Sat"
+    #
+    def forecasts
+      convertions = [[:date, :to_date], [:low, :to_i], [:high, :to_i], [:code, :to_i], :day, :text]
+      item_attribute('yweather:forecast').collect do |forecast|
+        translate! do_convertions(forecast, *convertions)
+       forecast = response.forecasts.first['text','day', 'date', 'low', 'high']
+      end
+    end
 
-puts #{get weather}
+
+
+
   
+
+  
+  
+
+# straight text output
+print <<forecast
+
 
