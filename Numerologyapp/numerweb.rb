@@ -41,8 +41,8 @@ when 1
   end
 
 get '/newpage' do
-	# contents of your new page
-	erb :newpage
+  # contents of your new page
+  erb :newpage
 end
 
 

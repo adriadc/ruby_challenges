@@ -49,7 +49,7 @@ case birth_path_num
 	when 9
 		message = "Your birth date number is 9. Nine is the teacher. Nine is a tolerant, somewhat impractical and sympathetic vibration. It is ruled by Mars."
 	else
-		message = "Your birth date number is too complex. You are a unusual being"
+		message = "Your numerolgy number is too complex. you are a unusual being"
 	end
 
 end
@@ -82,4 +82,3 @@ birth_path_num = get_birth_path_num(birthdate)
 message = get_message(birth_path_num)
 "#{message}"
 end
-

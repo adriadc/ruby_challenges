@@ -36,20 +36,15 @@ when 1
   when 9
     message = "Your numerology number is #{birth_path_num}.\nThis is the teacher. Number Nine is a tolerant, somewhat impractical, and sympathetic vibration. Ruled by Mars."
   else
-    message = "Uh oh! Your birth path number is not 1-9!"
+  	message = "Uh oh! Your birth path number is not 1-9!"
   end
   end
-
-get '/newpage' do
-  # contents of your new page
-  erb :newpage
-end
 
 
 get '/:birthdate' do
-  birthdate = params[:birthdate]
-  birth_path_num = get_birth_path_num(birthdate)
-  @message = get_message(birth_path_num)
-  erb :index
+birthdate = params[:birthdate]
+birth_path_num = get_birth_path_num(birthdate)
+message = get_message(birth_path_num)
+"#{message}"
 end
 

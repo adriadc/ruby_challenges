@@ -1,1 +1,0 @@
-../../../provided-code/spec/numerology_with_templates_spec.rb

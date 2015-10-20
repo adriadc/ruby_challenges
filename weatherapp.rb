@@ -32,7 +32,7 @@ end
     #  condition['date'] => #<Date: -1/2,0,2299161>
     #
 
-#from weather man Github page useage
+#from weather man Github page useage of weatherman app code - language - condition (temp, date, text)
     class Response
 
     attr_accessor :document_root
@@ -66,6 +66,6 @@ case getweather
 		puts "I am not sure! Look outside!"
 	end
 
-puts #{get weather}
+puts #{getweather}
   
 
