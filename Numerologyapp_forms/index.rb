@@ -40,11 +40,24 @@ when 1
   end
   end
 
+  get '/' do 
+    erb :form
+  end
+
+  post '/' do 
+    "#{params}"
+  end
+
 get '/newpage' do
   # contents of your new page
   erb :newpage
 end
 
+post '/:message' do
+  @message = params[:message]
+  @message = get_message(birth_path_num)
+  erb :index
+end
 
 get '/:birthdate' do
 	birthdate = params[:birthdate]
@@ -52,4 +65,7 @@ get '/:birthdate' do
 	@message = get_message(birth_path_num)
   erb :index
 end
+
+
+
 

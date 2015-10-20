@@ -1,0 +1,33 @@
+Quiz Completed
+
+Thank you for completing this quiz.
+You scored 80%!
+Q.1	I've created a template called posts.erb and I want to use it when a user goes to "/posts", what is the right way to write my GET request?
+get "/" do erb :posts end
+✓get "/posts" do erb :posts end
+get "/" do erb :post end
+get "/post" do erb :post end
+
+Q.2	I want to show my name on my homepage, what is the right type of variable to use to pass my name to my template?
+Name
+✓@name
+name
+$name
+
+Q.3	I want to print out the variable @name in my template, what is the right tag?
+<% @name %>
+<%= name %>
+✓<%= @name %>
+<% name %>
+
+Q.4	I am creating a layout template file, what should I title it?
+✓layout.erb
+layout.html
+layout.rb
+layout.hml
+
+Q.5	What does the yield tag do?
+It prints out "yield" on the screen
+It prints out the contents of any other template file in the index.erb
+✓It prints out the contents of any other template file inside of layout.erb
+It tells Sinatra to slow down
