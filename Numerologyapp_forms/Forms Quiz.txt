@@ -1,0 +1,36 @@
+Forms Quiz
+
+Quiz Completed
+
+Thank you for completing this quiz.
+You scored 80%!
+Q.1	What does the action attribute of a form do?
+✓It tells the form where to submit it's request to!
+It tells the form whether it's submitting a POST or GET request
+It tells the form whether it will be submitting it's contents or not
+It tells the form whether or not go GET INTO ACTION
+
+Q.2	Which of the following is NOT an HTTP request?
+GET
+POST
+PUT
+DELETE
+✓These are all HTTP requests!
+
+Q.3	Your post object looks like this: { “first_name” => “Adda”, “last_name” => “Birnir”, “birthdate” => “08221985”}, what is the first input in your form?
+✓input name="first_name" type="text"
+input name="last_name" type="text"
+input name="text" type="first_name"
+input name="first_name" type="email"
+
+Q.4	What does this code do: @birthdate = params[:birthdate]
+It finds out what your birthdate is
+✓It grabs the value of the hash object with the key "birthdate" and saves it to the @birthdate variable
+It opens up the :birthdate variable and gets the information
+It saves your birthdate to the birthdate variable
+
+Q.5	What type of HTTP request should you use when submitting your form (most of the time)?
+PUT
+GET
+✓POST
+DELETE
