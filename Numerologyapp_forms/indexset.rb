@@ -47,10 +47,6 @@ birthdate = params[:birthdate]
   erb :index
 end
 
-def valid_birthdate(input)
-    return true
-end
-
 
   get '/' do 
     erb :form
@@ -58,25 +54,14 @@ end
 
 
 
-post '/' do 
-  birthdate = params[:birthdate]
-  if valid_birthdate(birthdate) && valid_birthdate(birthdate).length == 8
-  birth_path_num = get_birth_path_num(birthdate)
-   redirect "/message/#{birth_path_num}"
-
-   else
-      erb :form    
-    end
+post '/' do
+  setup_index_view
 end
 
 get '/:birthdate' do
   setup_index_view
 end
 
-get '/message/:birth_path_num' do
-   birth_path_num = params[:birth_path_num].to_i
-   @message = get_message(birth_path_num)
-   erb :index
-end
+
 
 

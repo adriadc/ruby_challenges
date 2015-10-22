@@ -39,17 +39,6 @@ when 1
   	message = "Uh oh! Your birth path number is not 1-9!"
   end
   end
-  
-def setup_index_view
-birthdate = params[:birthdate]
-  birth_path_num = get_birth_path_num(birthdate)
-  @message = get_message(birth_path_num)
-  erb :index
-end
-
-def valid_birthdate(input)
-    return true
-end
 
 
   get '/' do 
@@ -57,26 +46,20 @@ end
   end
 
 
-
-post '/' do 
+post '/' do
   birthdate = params[:birthdate]
-  if valid_birthdate(birthdate) && valid_birthdate(birthdate).length == 8
   birth_path_num = get_birth_path_num(birthdate)
-   redirect "/message/#{birth_path_num}"
-
-   else
-      erb :form    
-    end
+  @message = get_message(birth_path_num)
+  erb :index
 end
 
 get '/:birthdate' do
-  setup_index_view
+  birthdate = params[:birthdate]
+  birth_path_num = get_birth_path_num(birthdate)
+  @message = get_message(birth_path_num)
+  erb :index
 end
 
-get '/message/:birth_path_num' do
-   birth_path_num = params[:birth_path_num].to_i
-   @message = get_message(birth_path_num)
-   erb :index
-end
+
 
 

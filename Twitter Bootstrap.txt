@@ -1,0 +1,44 @@
+Now let’s add Twitter Bootstrap! Following the instructions on the ‘Getting Started’ tab on the Bootstrap website, add the Bootstrap CSS files to your layout.erb file. We will use a CDN (content delivery network) link so that we don’t have to download and add the file to our project.
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+1
+2
+	
+The Twitter Bootstrap site - Getting started is
+http://getbootstrap.com/getting-started/
+
+Check out Bootstrap’s documentation on forms http://getbootstrap.com/css/#forms It recommends wrapping corresponding label and input elements in a div with class form-group, and it says to add the class form-control to input elements.
+
+
+add a horizonta rule
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr
+
+The HTML <hr> element represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section). In previous versions of HTML, it represented a horizontal rule. It may still be displayed as a horizontal rule in visual browsers, but is now defined in semantic terms, rather than presentational terms.
+
+Check out Bootstrap’s documentation on forms http://getbootstrap.com/css/#forms It recommends wrapping corresponding label and input elements in a div with class form-group, and it says to add the class form-control to input elements.
+go there
+http://getbootstrap.com/css/#forms
+
+To help space things out evenly on the page, Bootstrap offers a grid system that divides the screen into rows and columns. Each row is made up of 12, equal-width columns. Let’s use the grid system to display some text to the left of the form. First, define a row, by wrapping all of the content in a div with class name row
+
+Add a para graph and format it
+
+<div>
+<p>Pythagoras and other philosophers of the time believed that because mathematical concepts were more "practical" (easier to regulate and classify) than physical ones, they had greater actuality. St. Augustine of Hippo (A.D. 354–430) wrote "Numbers are the Universal language offered by the deity to humans as confirmation of the truth." Similar to Pythagoras, he too believed that everything had numerical relationships and it was up to the mind to seek and investigate the secrets of these relationships or have them revealed by divine grace. - Wikipedia</p>
+</div>
+
+Add the amount of columns you would have the test take up.
+ex.
+<div class="col-md-4">
+
+Now let’s just style the message page a bit. We’ll put the message in a well, which is just a nice, bordered panel.
+ex.
+<div class="well">
+
+Formatting
+http://getbootstrap.com/css/
+
+
+
+
+
