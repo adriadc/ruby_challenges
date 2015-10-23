@@ -1,0 +1,49 @@
+http://stackoverflow.com/questions/15301826/psql-fatal-role-postgres-does-not-exist
+
+I'm a postgres novice.
+
+I installed the postgres.app for mac. I was playing around with the psql commands and I accidentally dropped the postgres database. I don't know what was in it.
+
+I'm currently working on a tutorial: http://www.rosslaird.com/blog/building-a-project-with-mezzanine/
+
+And I'm stuck at sudo -u postgres psql postgres
+
+ERROR MESSAGE: psql: FATAL:  role "postgres" does not exist
+
+$ which psql
+
+/Applications/Postgres.app/Contents/MacOS/bin/psql
+This is what prints out of psql -l
+
+                                List of databases
+    Name    |   Owner    | Encoding | Collate | Ctype |     Access privileges     
+------------+------------+----------+---------+-------+---------------------------
+ user       | user       | UTF8     | en_US   | en_US | 
+ template0  | user       | UTF8     | en_US   | en_US | =c/user                  +
+            |            |          |         |       | user      =CTc/user      
+ template1  | user       | UTF8     | en_US   | en_US | =c/user                  +
+            |            |          |         |       | user      =CTc/user      
+(3 rows)
+So what are the steps I should take? Delete an everything related to psql and reinstall everything?
+
+Thanks for the help guys!
+
+
+Note that the error message does NOT talk about a missing database, it talks about a missing role. Later in the login process it might also stumble over the missing database.
+
+But the first step is to check the missing role: What is the output within psql of the command \du ? On my Ubuntu system the relevant line looks like this:
+
+                              List of roles
+ Role name |            Attributes             | Member of 
+-----------+-----------------------------------+-----------
+ postgres  | Superuser, Create role, Create DB | {}        
+If there is not at least one role with superuser, then you have a problem :-)
+
+If there is one, you can use that to login. And looking at the output of your \l command: The permissions for user on the template0 and template1 databases are the same as on my Ubuntu system for the superuser postgres. So I think your setup simple uses user as the superuser. So you could try this command to login:
+
+sudo -u user psql user
+If user is really the DB superuser you can create another DB superuser and a private, empty database for him:
+
+CREATE USER postgres SUPERUSER;
+CREATE DATABASE postgres WITH OWNER postgres;
+But since your postgres.app setup does not seem to do this, you also should not. Simple adapt the tutorial.

@@ -15,9 +15,9 @@ DB_NAME = APP_NAME + "_development.db"
 
 TEST_DB_NAME = APP_NAME + "_test.db"
 
-DB_USERNAME = 'postgres'
+DB_USERNAME = 'adriadc'
 
-DB_PASSWORD = '123456'
+DB_PASSWORD = ''
 
 if ENV['DEBUG']
   ActiveRecord::Base.logger = Logger.new(STDOUT)
