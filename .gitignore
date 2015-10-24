@@ -6,3 +6,5 @@ ruby/.DS_Store
 204-week1-monday/provided-code/Gemfile copy
 
 204-week1-monday/sample-solution/.rspec
+
+Active_record/activerecord-template/Gemfile
