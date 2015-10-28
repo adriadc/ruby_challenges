@@ -1,0 +1,59 @@
+
+Quiz Completed
+
+Thank you for completing this quiz.
+You scored 80%!
+Q.1 What do models do?
+Pose for photos!
+
+✓
+Define what data your app has, the different classes and stuff!
+
+Define what data is available in what views
+
+Connect your app to the database
+
+
+Q.2 What do controllers do?
+Controls EVERYTHING
+
+The controller controls what each path looks like
+
+✓
+The controller controls what data is available in each view
+
+The controller controls what data your app has
+
+
+Q.3 Why is MVC considered a best practice?
+Because it keeps your code organized and neat
+
+It makes your app easier to maintain over the longterm
+
+It separates your code by the role it plays in your app
+
+✓
+All of the above
+
+
+Q.4 In which folder do you put your models, views, and controllers folders
+✓
+app
+
+config
+
+views
+
+sinatra-mvc
+
+
+Q.5 What is the correct name for your folders?
+model, view, controller
+
+✓
+models, views, controllers
+
+model, views, controller
+
+model, view, controllers
+

@@ -1,0 +1,59 @@
+
+Quiz Completed
+
+Thank you for completing this quiz.
+You scored 100%!
+Q.1 Which of the following is common cause of code smells?
+Duplicative code
+
+Too many parameters being passed to a method
+
+Identifiers (method, variable, class names) that are waaaay too long
+
+✓
+All of the above!
+
+
+Q.2 How do you seed your database with fake data?
+✓
+You can use Faker to generate a bunch of fake data
+
+You download a seed file and import it into your database
+
+You create a bunch of fake data by yourself
+
+You download fake credit cards from the Internet
+
+
+Q.3 What should you do if you catch a whiff of a code smell?
+STOP EVERYTHING AND DO TRIAGE
+
+Ignore it! The smell will go away!
+
+✓
+Investigate! Is there a real problem? Or just a passing stink?
+
+Delete everything and start over. On a new computer.
+
+
+Q.4 What does it mean to make something a class level method?
+It means that the method is in a class of it's own
+
+✓
+It means that it's a method that can be called on any member of a specific class
+
+It means that the method can be called on ANY classes
+
+It means that the method can't be called on any classes
+
+
+Q.5 When you make a method a class level method, what do you need to do?
+Put the method in a file called class.rb
+
+✓
+Put the method inside of the class & call it on "self"
+
+Nothing!
+
+Put the method inside of the class & call it on the "classname"
+
