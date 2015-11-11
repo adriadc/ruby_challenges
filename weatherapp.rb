@@ -1,6 +1,7 @@
 #use the Yahoo Weather API Gem
 require 'rubygems'
 require 'yahoo_weatherman'
+require 'nokogiri'
 
 #user tells you where they are with zip code/postal code
 puts "Where are you? Enter your zipcode:"
