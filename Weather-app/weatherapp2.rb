@@ -30,8 +30,17 @@ def forecasts
       end
     end
 
+class item[time]
 weather.forecasts.each do |forecast|
-   day = forecast (date) 
+  #trying to call a method called forecast but the only forecast we know is the variable forecast.
+  # need to add a class method maybe here not sure how it will happen yet.
+
+  @@today == 0
+def self.today_count
+    @@today_count
+  end  
+end
+   day = forecast['date'] 
    dayofweek = day.strftime('%w').to_i
 
   if dayofweek == today
@@ -40,6 +49,8 @@ weather.forecasts.each do |forecast|
   day_name 'Tomorrow'
   else day_name = day.strftime('%A')
   end
+@@today += 1
+
 puts day_name + ' is going to be ' + forecast['text'].downcase + ' with a low of ' + forecast['low'].to_s + ' and a high of ' + forecast['high'].to_s
 
 end
