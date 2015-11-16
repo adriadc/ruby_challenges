@@ -1,0 +1,60 @@
+
+div {
+    word-spacing: 1px;
+} 
+nav {
+	line-height:50px;
+    background-color:#C0C0C0;
+    height:70px;
+    width:800px;
+    float:center;
+	color:#808080;
+	text-size:40px;
+	text-align:center;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    position:center;
+    border-style: inset;
+    border-width: 3px;
+	padding:20px;
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+btn {
+	background-color:#FFFFFF;
+	color:#000000;
+}
+body {
+	background: #E3E4FA;
+	text-align:left;
+	padding:10px;
+}
+.new-person {
+ margin: 15px 0px 25px;
+ color:blue;
+ text-align:left;
+ padding:10px; 
+}
+ 
+.edit-person {
+ margin: 15px 0px 15px;
+ color:black;
+ text-align:left;
+ padding:10px; 
+}
+
+footer {
+    
+    color:black;
+    text-align:left;
+    padding:10px; 
+}

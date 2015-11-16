@@ -1,1 +1,0 @@
-../../../provided-code/spec/people_index_spec.rb

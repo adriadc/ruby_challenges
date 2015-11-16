@@ -1,1 +1,0 @@
-../../../provided-code/spec/people_controller_spec.rb

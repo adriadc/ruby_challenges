@@ -1,1 +1,0 @@
-../../../provided-code/spec/people_show_spec.rb
