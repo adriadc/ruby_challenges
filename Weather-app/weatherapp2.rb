@@ -27,10 +27,18 @@ def forecasts
     forecast = response.forecasts.first['text','day', 'date', 'low', 'high']
   end
 end
+#adding units for farhnheit Not working yet
+
+def units
+     attribute('yweather:units')
+     units = response.units[['temperature']  => "F"]
+      
+    end
+
 
 weather = weather_info(zipcode)
  #loop so that I can get weather for each day
- 
+
     weather.forecasts.each do |forecast|
       puts forecast['day'].to_s + ' is going to be ' + forecast['text'].downcase + ' with a low of ' + forecast['low'].to_s + ' and a high of ' + forecast['high'].to_s
     end
