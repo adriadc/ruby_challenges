@@ -40,7 +40,6 @@ validates_presence_of :first_name, :last_name, :birthdate
   	end
   end
 
-  
 
 def self.valid_birthdate(input)
   if(input.length == 8 && !input.match(/^[0-9]+[0-9]$/).nil?)

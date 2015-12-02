@@ -1,7 +1,7 @@
 get '/people' do
   @people = Person.all
-  erb :"/people/index"
-end
+    erb :"/people/index"
+  end
 
 get '/people/new' do
   @person = Person.new
@@ -15,16 +15,16 @@ post '/people' do
       birthdate = Date.strptime(params[:birthdate], "%m%d%Y")
     end
   
-  person = Person.new(first_name: params[:first_name], last_name: params[:last_name], birthdate: params[:birthdate])
+  @person = Person.create(first_name: params[:first_name], last_name: params[:last_name], birthdate: birthdate)
 
   if @person.valid?
     @person.save
     redirect "/people/#{@person.id}"
   else
-    @error = "The data you entered isn't valid"
+    @errors = "The data you entered isn't valid"
       erb :"/people/new"
     end
-    @error = ''
+    @errors = ''
     @person.errors.full_messages.each do |msg|
     @errors = "#{@errors} #{msg}."
     end
@@ -59,10 +59,10 @@ delete '/people/:id' do
   end
 
 get '/people/:id' do
-	@person = Person.find(params[:id])
-   birth_path_num = Person.get_birth_path_num(@person.birthdate.strftime("%m%d%Y"))
-   @message = Person.get_message(birth_path_num)
-   erb :"/people/show"
+  @person = Person.find(params[:id])
+  birth_path_num = Person.get_birth_path_num(@person.birthdate.strftime("%m%d%Y"))
+  @message = Person.get_message(birth_path_num)  
+  erb :"/people/show"
 end
 
 
