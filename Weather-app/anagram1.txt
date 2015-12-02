@@ -1,0 +1,7 @@
+separate the letters
+move the letters around one at a time to see if a possible word forms
+spell out the word
+if the world is a word keep the word
+else move to the next letter over to the front to see if it makes a possible word.
+        Put new word together.      
+    repeat.
