@@ -27,10 +27,6 @@ def forecasts
     forecast = response.forecasts.first['text','day', 'date', 'low', 'high']
   end
 end
-#adding units for farhnheit Not working yet
-
-
-
 
 weather = weather_info(zipcode)
  #loop so that I can get weather for each day

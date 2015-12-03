@@ -15,18 +15,19 @@ post '/people' do
       birthdate = Date.strptime(params[:birthdate], "%m%d%Y")
     end
   
-  @person = Person.create(first_name: params[:first_name], last_name: params[:last_name], birthdate: birthdate)
-
+  @person = Person.new(first_name: params[:first_name], last_name: params[:last_name], birthdate: birthdate)
+  
+  
   if @person.valid?
-    @person.save
-    redirect "/people/#{@person.id}"
+      @person.save
+      redirect "/people/#{@person.id}"
   else
-    @errors = "The data you entered isn't valid"
+      @errors = ''
+      @person.errors.full_messages.each do |msg|
+      @errors = "#{@errors} #{msg}."
+      end
+      @errors = "The data you entered isn't valid"
       erb :"/people/new"
-    end
-    @errors = ''
-    @person.errors.full_messages.each do |msg|
-    @errors = "#{@errors} #{msg}."
     end
   end
 
