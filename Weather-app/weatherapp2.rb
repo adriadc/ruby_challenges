@@ -11,7 +11,7 @@ zipcode = gets.to_s.chomp
 
 def weather_info(zipcode)
 
-	client = Weatherman::Client.new
+	client = Weatherman::Client.new(unit: 'f')
   weather = client.lookup_by_location(zipcode)
 end
 
@@ -29,11 +29,7 @@ def forecasts
 end
 #adding units for farhnheit Not working yet
 
-def units
-     attribute('yweather:units')
-     units = response.units[['temperature']  => "F"]
-      
-    end
+
 
 
 weather = weather_info(zipcode)
@@ -43,7 +39,7 @@ weather = weather_info(zipcode)
       puts forecast['day'].to_s + ' is going to be ' + forecast['text'].downcase + ' with a low of ' + forecast['low'].to_s + ' and a high of ' + forecast['high'].to_s
     end
  
-    today = Time.now.strftime('%w').to_i
+    
 
 
 
