@@ -23,10 +23,11 @@ post '/people' do
       redirect "/people/#{@person.id}"
   else
       @errors = ''
-      @person.errors.full_messages.each do |msg|
-      @errors = "#{@errors} #{msg}."
+  @person.errors.full_messages.each do |message|
+    @errors = "#{@errors} #{message}."
+
       end
-      @errors = "The data you entered isn't valid"
+      
       erb :"/people/new"
     end
   end
