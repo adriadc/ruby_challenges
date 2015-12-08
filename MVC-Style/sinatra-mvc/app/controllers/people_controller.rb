@@ -9,13 +9,17 @@ get '/people/new' do
 end
 
 post '/people' do
+  #check to see if our params[:birthdate] variable has dashes in it. If it does, 
+  #we’ll assume it’s an okay date format and just pass it in as the birthdate. 
+  #And if not, then we’ll assume it’s “%m%d%Y” and use the conversion above.
+
     if params[:birthdate].include?("-")
       birthdate = params[:birthdate]
-    else
+      else      
       birthdate = Date.strptime(params[:birthdate], "%m%d%Y")
     end
   
-  @person = Person.new(first_name: params[:first_name], last_name: params[:last_name], birthdate: birthdate)
+  @person = Person.new(first_name: params[:first_name], last_name: params[:last_name], birthdate: params[:birthdate])
   
     if @person.valid?
     @person.save
