@@ -1,0 +1,14 @@
+#annagram constraints
+#1. we don’t care if the input word or the output words are actually words 
+#2. arguments to the method will be an array of strings (meaning we are going to pass our 
+#methods an array for now, like [“a”, “b”, “c”]).
+#3. imit the number of letters in the input word, starting with limiting it to 1 letter, then 2, and 3.
+
+#annagram with one letter
+get letter[a,b,c]
+print letter[a,b,c]
+
+#anagram with 2 letters
+get letters[ab,bc,cd]
+move one letter to the right
+print letter[ab,bc,cd]

@@ -1,0 +1,24 @@
+Hey Adria,
+
+I'm glad that you're learning things :) 
+
+okay so I presume you tried to create a new person with your form (since line 15 in your PeopleController is inside of the post method), and I also presume (correct me if my assumptions are wrong) that you tried to create a person with an empty birthdate?
+
+Now take a good look at your method and think about what happens, step by step (line by line) if 
+your params[:birthdate] is empty
+params[:birthdate] = '12-12-1960'
+params[:birthdate] = '12121995'
+
+Hint: The error message you're seeing is telling you that the argument that you're passing into the method strptime is not a valid date:
+
+
+I hope this helps :)
+-Max
+
+--
+Max Haack
+questions@skillcrush.com
+{#HS:145033555-37263#}  	
+On Mon, Dec 7, 2015 at 
+
+birthdate = Date.strptime(params[:birthdate], "%m%d%Y")

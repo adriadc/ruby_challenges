@@ -1,0 +1,95 @@
+#pseudocode with 2 letters
+create 2 letter string  array 
+
+Loop 
+an unknown amount of times to loop through the letters in the array
+Research stack overflow
+Research google
+
+move one letter to the left
+add one letter to the array
+
+print new 2 letter string array
+
+end
+
+Research google
+http://stackoverflow.com/questions/1484952/iterating-over-each-character-of-a-string-in-ruby-1-8-6-each-char
+
+
+http://stackoverflow.com/questions/4846853/generate-array-of-all-letters-and-digits
+to get an array out of it, just try the following:
+
+("a".."z").to_a
+
+http://stackoverflow.com/questions/310634/what-is-the-right-way-to-iterate-through-an-array-in-ruby
+array.length.times do |i|
+end
+
+array.each
+
+array.each_index
+
+for i in array
+
+or
+
+This will iterate through all the elements:
+
+array = [1, 2, 3, 4, 5, 6]
+array.each { |x| puts x }
+Prints:
+
+1
+2
+3
+4
+5
+6
+This will iterate through all the elements giving you the value and the index:
+
+array = ["A", "B", "C"]
+array.each_with_index {|val, index| puts "#{val} => #{index}" }
+Prints:
+
+A => 0
+B => 1
+C => 2
+
+http://ruby.bastardsbook.com/chapters/collections/
+
+my_first_array = my_first_array.reverse
+puts my_first_array.join(", ")   
+#=> 3, Beta, Alpha   
+
+arr = [1,2,3,4,5,6]              
+for x in 0..(arr.length-1)
+    puts arr[x]
+end
+
+
+# or, with while:
+x = 0
+while x < arr.length
+    puts arr[x]
+    x += 1
+end
+
+#I like this method
+The each method yields a reference to each element in the collection, rather than a reference to the element's numerical index in the array.
+
+However, sometimes a reference to the current element's index is useful. Collections also have the each_with_index method available to them:
+
+
+arr = ['cat', 'dog', 'pony', 'bird']
+arr.each_with_index do |str, idx|
+    puts "#{str} and #{arr[idx-1]} show"
+end              
+
+#=> cat and bird show
+#=> dog and cat show
+#=> pony and dog show
+#=> bird and pony show
+                
+
+                
