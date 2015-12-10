@@ -13,13 +13,14 @@ post '/people' do
   #we’ll assume it’s an okay date format and just pass it in as the birthdate. 
   #And if not, then we’ll assume it’s “%m%d%Y” and use the conversion above.
 
-    if params[:birthdate].include?("-")
+    if params[:birthdate].blank? || params[:birthdate].include?("-")
       birthdate = params[:birthdate]
       else      
       birthdate = Date.strptime(params[:birthdate], "%m%d%Y")
     end
-  
-  @person = Person.new(first_name: params[:first_name], last_name: params[:last_name], birthdate: params[:birthdate])
+   
+   
+  @person = Person.new(first_name: params[:first_name], last_name: params[:last_name], birthdate:birthdate)
   
     if @person.valid?
     @person.save

@@ -1,0 +1,22 @@
+#separate the letters
+input string ('')
+#move the letters around one at a time to see if a possible word forms
+#can use a while loop do
+#what can I reuse
+Move one letter to the left
+if it spells a word 
+	else keep 
+	else move one letter to the left
+end
+#outputs
+output string
+
+#constraints
+the output needs to be a word (dictionary)
+Output needs to be one letter
+Input needs to be one letter
+
+if the world is a word keep the word
+else move to the next letter over to the front to see if it makes a possible word.
+        Put new word together.      
+    repeat.

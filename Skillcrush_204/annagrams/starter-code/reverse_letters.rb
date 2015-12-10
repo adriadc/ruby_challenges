@@ -3,21 +3,19 @@
 #in order to generate an anagram for a two-letter words you just need 
 #to be able to give your method a two letter word and have it return the same letters, but reversed.
 #make an array
-array = ["a","b"]
+def reverse_letters (strings)
+#create an array with 2 letters
+	array = strings.length
+	strings = Array.new(2)
 
-def reverse_letters(array)
-	return array
+#Loop/reverse letters in the array
+	array.each_with_index do |strings, index|
+	reverse_letters[length - index - 1] = array	
   
 end
-#should take an array of 2 letters.
-	puts array.join(", ")
+#return an array of 2 letters.
+	reverse_letters
+ 	
 
-array.each_with_index 
-#reverse the array
-reverse_letters = array.reverse
-
- 
- #return an array of 2 letters.
- 	puts reverse_letters.join(", ")
-
-
+end
+#puts reversed_letters
