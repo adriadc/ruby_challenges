@@ -1,0 +1,30 @@
+literals
+http://stackoverflow.com/questions/1274675/ruby-what-does-warray-mean
+I think of %w() as a "word array" - the elements are delimited by spaces.
+
+There are other % literals:
+
+    %r() is another way to write a regular expression.
+    %q() is another way to write a single-quoted string (and can be multi-line, which is useful)
+    %Q() gives a double-quoted string
+    %x() is a shell command
+    %i() gives an array of symbols (Ruby >= 2.0.0)
+    %s() turns foo into a symbol (:foo)
+
+http://ruby-doc.org/core-2.0.0/doc/syntax/literals_rdoc.html#label-Percent+Strings
+or the two array forms of percent string, if you wish to include a space in one of the array entries you must escape it with a “\” character:
+
+%w[one one-hundred\ one]
+#=> ["one", "one-hundred one"]
+
+If you are using “(”, “[”, “{”, “<” you must close it with “)”, “]”, “}”, “>” respectively. You may use most other non-alphanumeric characters for percent string delimiters such as “%”, “|”, “^”, etc.
+http://www.rubyinside.com/21-ruby-tricks-902.html
+
+#code from Anagram.rb
+
+#hash = Hash.new
+#%w(abc acb bac bca cab cba).each_with_index { |item, index|
+  #hash[item] = index
+#}
+hash 
+#end

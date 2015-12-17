@@ -1,12 +1,13 @@
-
-
-#in order to generate an anagram for a two-letter words you just need 
-#to be able to give your method a two letter word and have it return the same letters, but reversed.
+#in order to generate an anagram for a three-letter words you just need 
+#to be able to give your method a three letter word and have it return the same letters, but reversed.
 #make an array
-letters = ["a","b"]
-puts letters.join(", ")
+letters = ["a","b","c"]
+
+puts letters.join
+
 def reverse_letters(letters)
-#create an array with 2 letters
+
+#create an array with 3 letters
 	long = letters.length
   reversed = Array.new(long)
 
@@ -15,7 +16,7 @@ def reverse_letters(letters)
 letters.each_with_index do |letter, index| 
     reversed[long - index - 1] = letter
   end
-#return an array of 2 letters.
+#return an array of 3 letters.
 reversed
 end
-puts #{letter}.join(", ") 
+puts reverse_letters(letters).join

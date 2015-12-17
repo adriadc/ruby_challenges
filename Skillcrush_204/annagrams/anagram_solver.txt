@@ -1,0 +1,26 @@
+anagram_solver
+#http://stackoverflow.com/questions/7167634/ruby-anagram-solver
+
+@words_hash = words.each_with_object(Hash.new []) do |word, hash|
+  hash[word.chars.sort] += [word]
+end
+
+The code above assumes ruby 1.9.2. If you are using an older version then chars won't exist but you can use .split('').sort.
+
+The default object of the hash is set to be the empty array, which makes the coding easier in some cases because you don't have to worry about the hash giving you nil.
+
+Source: https://github.com/DavidEGrayson/anagram/blob/master/david.rb
+
+def combine_anagrams(words)
+  output_array = Array.new(0)
+  words.each do |w1|
+    temp_array = []
+    words.each do |w2|
+      if (w2.downcase.split(//).sort == w1.downcase.split(//).sort)
+        temp_array.push(w2)
+      end
+    end
+    output_array.push(temp_array)
+  end
+  return output_array.uniq
+end
