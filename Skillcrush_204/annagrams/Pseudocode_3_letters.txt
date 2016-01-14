@@ -34,3 +34,52 @@ In the last form, an array of the given size is created. Each element in this ar
 Array.new(3){ |index| index ** 2 }
 # => [0, 1, 4]
 
+http://stackoverflow.com/questions/5212972/ruby-longest-word-in-array
+
+class Array
+  def longest_word
+    # Convert array elements to strings in the event that they're not.
+    test_array = self.collect { |e| e.to_s }
+    test_array.inject() do |word, comparison|
+      if word.kind_of?(Array) then
+        if word[0].length == comparison.length then
+          word << comparison
+        else
+          word[0].length > comparison.length ? word : comparison
+        end
+      else
+        # If words are equal, they are pushed into an array
+        if word.length == comparison.length then
+          the_words = Array.new
+          the_words << word
+          the_words << comparison
+        else
+          word.length > comparison.length ? word : comparison
+        end
+      end
+    end
+  end
+end
+
+class Array
+  def longest_word
+    group_by(&:size).max.last
+  end
+end
+
+http://ruby-doc.org/core-2.2.1/Enumerable.html
+Enumerate
+
+If no block is given, an enumerator is returned instead.
+
+hash = Hash.new
+%w(cat dog wombat).each_with_index { |item, index|
+  hash[item] = index
+}
+hash   #=> {"cat"=>0, "dog"=>1, "wombat"=>2}
+
+used in method with no success
+word_hash = words.each_with_object(Hash.new []) do |word, hash|
+      hash[word.chars.sort] += [word]
+
+
