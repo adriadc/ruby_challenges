@@ -1,62 +1,39 @@
-#this is an annagram generator
 require_relative 'reverse_letters'
 
-#require our reverse_letters method file
-#Use the same directory/code structure as you did yesterday — we will reuse our reverse_letters.rb code.
+#make a method to use with "reverse_letters.rb"
 
+  def find_anagram(letters)
+  
+    #define length of word
+    long = letters.length
 
-#in order to generate an anagram for a three-letter words you just need 
-#to be able to give your method a three letter word and have it return the same letters, but reversed.
-#make an array
-
-
-#have you method accept a three_letter_word
-
-
+    # Convert word to an array of letters
+    letters = letters.split('')
  
+    # Create a blank array to store our anagrams
+    anagram = []
+ 
+    # Loop through each letter in letters
+    letters.each_with_index do |letter, index|
 
-#create a method called find anagram
-class Anagram
-	def find_anagram(word)
-		@word = word
+      # Select the remaining letters
+      remainder = letters.select { |l| l != letter }
+ 
+      # Create a new word by combining the letter + the remaining letters
+      # Add new word to anagrams array
 
+      anagram << letter + remainder.join('')
+ 
+      # Create a new word by combining the letter + the reverse of the remaining letters
+      # Add new word to anagrams array
 
-		#compare anagram 
-		word = 0
-  hash = Hash.new []
-  words.each do |word|
-    word += 1
-    (letters..words.count).each do |i|
-      hash[word.to_s.chars.sort.join] += [word]
+      anagram << letter + reverse_letters(remainder).join('')
     end
-    hash[word.to_s.chars.sort.join] = hash[word.to_s.chars.sort.join].uniq
+ 
+    # Return anagrams array
+    anagram 
   end
-  return hash
-end
-
-	anagram = Anagram.new
-	anagram.display
-		#If this anagram is a real word then print word
-		#else if 
-		#sort word
-		#compare word to see if a real word
-		#reverse_letters
-		
-		#find_anagram(word)).to be_a(Array)
-
-		
-		#find_anagram(word)).to match_array(
-        #%w(abc acb bac bca cab cba)
 
 
-	
-	puts find_anagram(words)
 
-end
-	
 
-#find_anagram takes a word (string).
-
-#find_anagram returns an array of strings.
-
-#return the same letters but reversed

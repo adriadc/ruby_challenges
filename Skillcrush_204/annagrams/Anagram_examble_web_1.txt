@@ -10,4 +10,6 @@ http://www.codeodor.com/index.cfm/2007/3/6/Anagrams-in-Ruby/1015
 
 (Excerpted from Wikipedia). An anagram is a type of word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once; for example orchestra can be rearranged into carthorse
 
+http://blog.lojic.com/2007/10/22/solving-anagrams-in-ruby/
+
 

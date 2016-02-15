@@ -82,4 +82,22 @@ used in method with no success
 word_hash = words.each_with_object(Hash.new []) do |word, hash|
       hash[word.chars.sort] += [word]
 
+  #from Stack Overflow
+  Using Jerry Coffin's approach, you get something like
+
+  def characters_in_string(string)
+  string.downcase.gsub(/\s/, '').chars.sort
+end
+
+def anagrams?(string1, string2)
+  characters_in_string(string1) == characters_in_string(string2)
+end
+
+if anagrams?(ARGV[0], ARGV[1])
+  puts "Anagrams!"
+else
+  puts "Not anagrams"
+  exit 1
+end
+
 

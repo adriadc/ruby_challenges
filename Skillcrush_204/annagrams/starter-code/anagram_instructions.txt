@@ -1,0 +1,46 @@
+Instructions
+
+1. Use the same directory/code structure as you did yesterday — we will reuse our reverse_letters.rb code.
+
+2. In the file anagram.rb require our reverse_letters method so you can call it from your new method:
+require_relative 'reverse_letters'
+1
+  
+require_relative 'reverse_letters'
+
+3. Create a method called find_anagram.
+
+Make sure that:
+
+    find_anagram takes a word (string).
+    find_anagram returns an array of strings.
+
+4. Now make this algorithm happen!
+
+5. Feeling stuck? Remember your problem solving skills.
+
+This is a HARD method to get working, so don’t fret. It’s supposed to be hard.
+
+That said, we have made some hints available to you in case you need ’em:
+
+Hint #1
+Check out the Ruby Docs on Enumerables. See if you don’t get any ideas from there!
+
+Hint #2
+Check out the Ruby Docs about the select method for Arrays.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+What I thought to do:
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+reqiure_relative 'reverse_letters'
+
+def find_anagram(word)
+words = [''].to_s
+return words.Array.new
+end
+
+
+
