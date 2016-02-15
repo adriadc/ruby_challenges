@@ -1,0 +1,46 @@
+head {
+
+}
+body {
+  background:#f8f8f8;
+  background:url('images/tiles-01.png'),url('images/tiles-03.png'),url('images/tiles-02.png');
+
+  font-family:'montserrat', arial;
+}
+h1 {
+  
+  color: red;
+  text-align: center;
+}
+h2 {
+  background-color:red;
+  background-size:100px 100px;
+  color: white;
+    text-align: center;
+}
+
+h3 {
+  background-color: red;
+  color: white;
+    text-align: center;
+}
+
+ul {
+  
+  color: black;
+  size:20px;
+    text-align: left;
+}
+
+li {
+  background:#f8f8f8;
+  background-size:70px 90px;
+  color: black;
+  size:30px;
+    text-align: left;
+
+}
+
+footer {
+
+}
